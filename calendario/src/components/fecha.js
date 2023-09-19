@@ -1,11 +1,17 @@
 import './indicador'
 
-function Fecha(steps) {
-    const fecha = new Date();
-    fecha.setDate(fecha.getDate() + steps); 
+function Fecha(props) {
+  const Fecha = new Date()
+
+  console.log(Fecha);
+  function obtFecha(Fecha){
+    Fecha.setDate(Fecha.getDate() + props.dias)
+    return
+  }
   return (
     <>
-        <span>{fecha}</span>
+      <h1>LA FECHA BUSCADA ES: </h1>
+      <h1>{obtFecha}</h1>
     </>
   );
 }

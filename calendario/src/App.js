@@ -9,10 +9,10 @@ function App() {
       <h1>BIENVENIDOS</h1>
       <Botonera 
       />
+      <Fecha 
+      />
       <Hora
       imgUrl='https://cdn-icons-png.flaticon.com/128/495/495976.png'
-      />
-      <Fecha 
       />
     </>
   );

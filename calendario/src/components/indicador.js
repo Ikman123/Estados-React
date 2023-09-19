@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import './styles.css'
+import Fecha from './fecha';
 
 function Botonera() {
     const [step,setStep] =useState(0);
@@ -17,7 +18,7 @@ function Botonera() {
     function saltBackNro(){
         setSteps(steps - step)
     }
-  return (
+    return (
     <>
         <div className='indicador-container'>
             <div className='indicador-base'>
@@ -35,8 +36,11 @@ function Botonera() {
                 <br></br>
             </div>
         </div>
+        <Fecha  
+            dias={steps}
+        />
     </>
-  );
+    );
 }
 
 export default Botonera;
