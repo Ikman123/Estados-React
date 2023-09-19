@@ -1,17 +1,18 @@
 import './indicador'
 
-function Fecha(props) {
-  const Fecha = new Date()
+function Fecha({dias}) {
 
-  console.log(Fecha);
-  function obtFecha(Fecha){
-    Fecha.setDate(Fecha.getDate() + props.dias)
-    return
+  function obtFecha(){
+    const Fecha = new Date()
+    Fecha.setDate(Fecha.getDate() + dias)
+    const dia = Fecha.getDate()
+    console.log(dia)
+    return <h1>Hoy es {dia} del {Fecha.getMonth() + 1}</h1>
   }
   return (
     <>
       <h1>LA FECHA BUSCADA ES: </h1>
-      <h1>{obtFecha}</h1>
+      <h1>{obtFecha()}</h1>
     </>
   );
 }

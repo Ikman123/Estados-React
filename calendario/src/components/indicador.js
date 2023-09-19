@@ -36,9 +36,7 @@ function Botonera() {
                 <br></br>
             </div>
         </div>
-        <Fecha  
-            dias={steps}
-        />
+        <Fecha dias={steps}/>
     </>
     );
 }
