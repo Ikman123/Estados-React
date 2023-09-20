@@ -22,17 +22,17 @@ function Botonera() {
     <>
         <div className='indicador-container'>
             <div className='indicador-base'>
-                <button onClick={backNro}>anterior</button>
+                <button className='boton' onClick={backNro}>↤</button>
                 <br></br>
                 <span>{step}</span>
-                <button onClick={nexNro}>siguiente</button>
+                <button className='boton' onClick={nexNro}>↦</button>
                 <br></br>
             </div>
             <div className='indicador-actual'>
-                <button onClick={saltBackNro}>anterior</button>
+                <button className='boton' onClick={saltBackNro}>⇇</button>
                 <br></br>
                 <span>{steps}</span>
-                <button onClick={saltNro}>siguiente</button>
+                <button className='boton' onClick={saltNro}>⇉</button>
                 <br></br>
             </div>
         </div>

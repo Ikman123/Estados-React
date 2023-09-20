@@ -1,18 +1,22 @@
 import './indicador'
 
 function Fecha({dias}) {
-
+  const DIAS = ["lunes","martes", "miercoles", "jueves", "viernes", "sabado", "domingo"]
+  const MESES = [
+    "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
+    "agosto", "septiembre", "octubre", "noviembre", "diciembre",
+  ];
   function obtFecha(){
     const Fecha = new Date()
     Fecha.setDate(Fecha.getDate() + dias)
-    const dia = Fecha.getDate()
-    console.log(dia)
-    return <h1>Hoy es {dia} del {Fecha.getMonth() + 1}</h1>
+    const dia = Fecha.getDate();
+    return <h1>La fecha nueva seria {DIAS[Fecha.getDay()]} {dia} de {MESES[Fecha.getMonth()]} de {Fecha.getFullYear()}</h1>
   }
+  const fechaActual= new Date()
   return (
     <>
-      <h1>LA FECHA BUSCADA ES: </h1>
-      <h1>{obtFecha()}</h1>
+      <h1 className='fecha-actual'>Hoy es {DIAS[fechaActual.getDay()]} {fechaActual.getDate()} de {MESES[fechaActual.getMonth()]} de {fechaActual.getFullYear()}</h1>
+      <h1 className='fecha-nueva'>{obtFecha()}</h1>
     </>
   );
 }
